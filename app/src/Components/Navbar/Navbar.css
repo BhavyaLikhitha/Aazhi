@@ -1,0 +1,78 @@
+/* src/components/Navbar.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+
+/* Proxima Nova is not freely available on Google Fonts.
+   If you're using a licensed version, load it via @font-face or CSS-in-JS.
+   For fallback purposes, we'll use system fonts here. */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.navbar__brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.navbar__title {
+  font-family: 'Leckerli One', cursive;
+  font-size: 34px;
+  font-weight: normal;
+  color: #0b238f;
+  margin: 0;
+}
+
+.navbar__subtitle {
+  font-family: 'Proxima Nova', 'Segoe UI', sans-serif; /* fallback if custom font not available */
+  font-size: 18px;
+  margin: 0;
+  color:black;
+  font-weight: 400;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 24px;
+  font-family: 'Helvetica World', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+.navbar__links a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.2s ease;
+}
+
+.navbar__links a:hover {
+  color: #0077cc;
+}
+
+.navbar__profile {
+  position: relative;
+}
+
+.navbar__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
