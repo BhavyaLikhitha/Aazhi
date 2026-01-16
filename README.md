@@ -1,4 +1,4 @@
-# Aazhi mental health services
+## Aazhi mental health services
 
 someshwari's project 
 physcology website
