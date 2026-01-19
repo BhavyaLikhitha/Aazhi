@@ -2,6 +2,7 @@ import Navbar from '../Navbar/Navbar'
 import Hero from '../Hero/Hero'
 import Services from '../Services/Services';
 import Providers from '../Providers/Providers';
+import FaqSection from '../FAQ/FAQ';
 // import Footer from '../Footer/Footer'
 
 function HomePage() {
@@ -11,6 +12,7 @@ function HomePage() {
             <Hero />
             <Services />
             <Providers />
+            <FaqSection />
               {/* <Footer /> */}
         </>
     );
