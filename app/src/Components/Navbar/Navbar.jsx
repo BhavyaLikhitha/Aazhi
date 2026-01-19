@@ -3,7 +3,6 @@
 import React from "react";
 import "./Navbar.css";
 import logo from './logo.png'
-// import logo from './l.png'
 
 function Navbar() {
   return (
