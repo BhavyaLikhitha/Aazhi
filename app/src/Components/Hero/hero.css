@@ -1,0 +1,60 @@
+/* src/components/HeroSection.css */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 60px;
+  background-color: white;
+  flex-wrap: wrap;
+  margin-top: -40px;
+}
+
+.hero__left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero__wave {
+  width: 1200px;
+  margin-top: -20px !important;
+  margin-left: -110px !important;
+  /* max-width: 1000px; */
+  height: auto;
+}
+
+.hero__right {
+  /* flex: 1; */
+  /* min-width: 580px; */
+ 
+}
+
+.hero__quote {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', sans-serif;
+  /* margin-bottom: 20px; */
+  margin-top: -80px !important;
+   text-align: right;
+}
+
+.hero__button {
+  background-color:  #539ad9;
+  margin-top: 20px ;
+  margin-left: 400px !important;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Helvetica Neue', sans-serif;
+  /* font-weight: 600; */
+  transition: background-color 0.3s ease;
+}
+
+.hero__button:hover {
+  background-color: #91C8F6; /* darker on hover */
+}
