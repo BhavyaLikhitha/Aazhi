@@ -1,10 +1,15 @@
-// src/components/HeroSection.jsx
-
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./hero.css";
-import waveImage from "./hero.png"; // <- replace with your actual image filename
+import waveImage from "./hero.png";
 
 function HeroSection() {
+  const navigate = useNavigate();
+
+  const handleBookSession = () => {
+    navigate("/book-session");
+  };
+
   return (
     <section className="hero">
       <div className="hero__left">
@@ -16,7 +21,13 @@ function HeroSection() {
           "YOU DON'T HAVE TO SAIL THROUGH THIS ALONE <br />
           LET’S NAVIGATE IT TOGETHER."
         </h2>
-       <button className="hero__button">Book a session</button>
+
+        <button
+          className="hero__button"
+          onClick={handleBookSession}
+        >
+          Book a session
+        </button>
       </div>
     </section>
   );
