@@ -3,6 +3,7 @@
 import React from "react";
 import "./Navbar.css";
 import logo from './logo.png'
+// import logo from './l.png'
 
 function Navbar() {
   return (
@@ -16,10 +17,10 @@ function Navbar() {
       </div>
 
       <nav className="navbar__links">
-        <a href="#">Home</a>
-        <a href="#">Book a Session</a>
-        <a href="#">Blog</a>
-        <a href="#">About Us</a>
+        <a href="/">Home</a>
+        <a href="/book-session">Book a Session</a>
+        <a href="/blog">Blog</a>
+        <a href="/about">About Us</a>
       </nav>
 
     </header>
