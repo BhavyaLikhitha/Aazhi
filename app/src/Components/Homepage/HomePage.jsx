@@ -3,7 +3,8 @@ import Hero from '../Hero/Hero'
 import Services from '../Services/Services';
 import Providers from '../Providers/Providers';
 import FaqSection from '../FAQ/FAQ';
-// import Footer from '../Footer/Footer'
+import Testimonials from '../Testimonials/Testimonials';
+import Footer from '../Footer/Footer'
 
 function HomePage() {
     return (
@@ -13,7 +14,8 @@ function HomePage() {
             <Services />
             <Providers />
             <FaqSection />
-              {/* <Footer /> */}
+            <Testimonials />
+              <Footer />
         </>
     );
 }
