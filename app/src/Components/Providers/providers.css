@@ -1,6 +1,5 @@
 .providers-section {
   background-color: #91C8F6;
-  /* padding: 60px 20px; */
   text-align: center;
   width: 100%;
   font-family: 'Helvetica Neue', sans-serif;
@@ -12,7 +11,6 @@
 }
 
 .providers-title {
-    /* margin-top: 100px; */
     margin-top: 0;
   font-size: 56px;
   font-weight: normal;
@@ -26,24 +24,22 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 80px;
-  margin-top: -70px !important;
+  margin-top: -40px !important;
 }
 
 .provider-card {
     margin-top: -20px;
   background-color: transparent;
-  /* max-width: 280px; */
-  padding: 60px;
+  padding: 40px 20px;
   text-align: center;
 }
 
 .provider-image {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
   object-fit: contain;
   border-radius: 50%;
-  /* background-color: #fefefe; */
-  /* padding: 10px; */
   margin-bottom: 20px;
 }
 

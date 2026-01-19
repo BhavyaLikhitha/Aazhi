@@ -8,6 +8,7 @@
   background-color: white;
   flex-wrap: wrap;
   margin-top: -40px;
+  overflow: hidden;
 }
 
 .hero__left {
@@ -15,13 +16,21 @@
   min-width: 280px;
 }
 
-.hero__wave {
+/* .hero__wave {
   width: 1200px;
   margin-top: -20px !important;
   margin-left: -110px !important;
-  /* max-width: 1000px; */
   height: auto;
+} */
+
+.hero__wave {
+  margin-top: -10px;
+  width: 1200px;
+  max-width: 1100px;
+  height: auto;
+  margin-left: -100px;
 }
+
 
 .hero__right {
   /* flex: 1; */
@@ -44,6 +53,7 @@
   background-color:  #539ad9;
   margin-top: 20px ;
   margin-left: 400px !important;
+  /* margin-left: auto; */
   color: white;
   padding: 12px 24px;
   font-size: 18px;
