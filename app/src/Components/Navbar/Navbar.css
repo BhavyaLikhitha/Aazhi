@@ -66,10 +66,7 @@
 }
 
 .navbar__links a:hover {
-  /* color: #0077cc;
-   */
    color: #539ad9;
-   /* color : #91C8F6; */
    font-weight: bold;
 }
 
