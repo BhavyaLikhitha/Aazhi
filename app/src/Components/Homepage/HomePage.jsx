@@ -1,5 +1,6 @@
 import Navbar from '../Navbar/Navbar'
 import Hero from '../Hero/Hero'
+import Services from '../Services/Services';
 // import Footer from '../Footer/Footer'
 
 function HomePage() {
@@ -7,6 +8,7 @@ function HomePage() {
         <>
             <Navbar />
             <Hero />
+            <Services />
               {/* <Footer /> */}
         </>
     );
