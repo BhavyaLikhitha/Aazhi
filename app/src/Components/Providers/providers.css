@@ -1,0 +1,67 @@
+.providers-section {
+  background-color: #91C8F6;
+  /* padding: 60px 20px; */
+  text-align: center;
+  width: 100%;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin-top: -140px !important;      /* ✅ prevents gap */
+  padding-top: 40px;  /* optional, for breathing room */
+  position: relative; /* to ensure z-index if needed */
+  z-index: 10;
+
+}
+
+.providers-title {
+    /* margin-top: 100px; */
+    margin-top: 0;
+  font-size: 44px;
+  font-weight: normal;
+  margin-bottom: 40px;
+  align-items: center;
+  color: #000;
+}
+
+.providers-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+  margin-top: -70px !important;
+}
+
+.provider-card {
+    margin-top: -20px;
+  background-color: transparent;
+  /* max-width: 280px; */
+  padding: 60px;
+  text-align: center;
+}
+
+.provider-image {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 50%;
+  /* background-color: #fefefe; */
+  /* padding: 10px; */
+  margin-bottom: 20px;
+}
+
+.provider-name {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+}
+
+.provider-qual {
+  font-size: 22px;
+  margin: 5px 0 10px;
+  color: #222;
+}
+
+.provider-focus {
+  font-size: 20px;
+  color: #000;
+  line-height: 1.4;
+}
