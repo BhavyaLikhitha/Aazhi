@@ -1,0 +1,125 @@
+.t-section {
+  background: #91C8F6;
+  padding: 60px 0 80px;
+  font-family: "Helvetica Neue", sans-serif;
+  overflow: hidden;
+  text-align: center;
+}
+
+.t-title {
+    margin-top: -20px;
+  font-size: 56px;
+  font-weight: normal;
+  margin-bottom: 50px;
+  color: #000;
+}
+
+/* Stage is fixed; cards are absolutely placed and move */
+.t-stage {
+  position: relative;
+  height: 320px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---- Card geometry ---- */
+.t-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 200px;
+  min-height: 260px;
+  padding: 20px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  text-align: left;
+
+  background: #E6F3FF;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+
+  /* Each card moves by its slot */
+  transform:
+    translate(-50%, -50%)
+    translateX(calc(var(--slot) * 230px))
+    scale(0.9);
+
+  opacity: 0.55;
+
+  /* This is the key: each card animates to its new slot */
+  transition: transform 650ms ease, opacity 650ms ease, background-color 650ms ease;
+}
+
+/* side visibility feel */
+.t-card[style*="--slot: -3"],
+.t-card[style*="--slot: 3"] {
+  opacity: 0.35;
+  transform:
+    translate(-50%, -50%)
+    translateX(calc(var(--slot) * 230px))
+    scale(0.82);
+}
+
+.t-card[style*="--slot: -2"],
+.t-card[style*="--slot: 2"] {
+  opacity: 0.5;
+  transform:
+    translate(-50%, -50%)
+    translateX(calc(var(--slot) * 230px))
+    scale(0.86);
+}
+
+.t-card[style*="--slot: -1"],
+.t-card[style*="--slot: 1"] {
+  opacity: 0.7;
+  transform:
+    translate(-50%, -50%)
+    translateX(calc(var(--slot) * 230px))
+    scale(0.92);
+}
+
+/* Center highlight */
+.t-card.active {
+  background: #fff;
+  opacity: 1;
+  z-index: 5;
+
+  transform:
+    translate(-50%, -50%)
+    translateX(0px)
+    scale(1.15);
+}
+
+/* Stars */
+.t-stars {
+  margin-bottom: 12px;
+}
+
+.star {
+  color: #cfcfcf;
+  font-size: 18px;
+  margin-right: 2px;
+}
+
+.star.filled {
+  color: #f3bc09; /* gold */
+}
+
+.t-text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.t-author {
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.t-date {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
