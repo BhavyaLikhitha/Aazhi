@@ -18,14 +18,14 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from './Components/Homepage/HomePage';
-// import BookSession from "./BookSession";
+import BookSession from "./Components/Book Session/session";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/book-session" element={<BookSession />} /> */}
+        <Route path="/book-session" element={<BookSession />} />
       </Routes>
     </BrowserRouter>
   );
