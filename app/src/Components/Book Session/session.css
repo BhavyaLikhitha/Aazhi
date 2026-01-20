@@ -1,118 +1,157 @@
+/* PAGE */
 .session-page {
   max-width: 1100px;
   margin: 0 auto;
   padding: 60px 20px;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", sans-serif !important;
   background: #ffffff;
 }
 
+/* TITLES */
 .session-title {
   text-align: center;
-  font-size: 42px;
+  font-size: 56px;
+  font-weight: normal;
+  margin-top: -20px !important;
   margin-bottom: 10px;
 }
 
 .session-subtitle {
   text-align: center;
+  font-size: 20px;
   margin-bottom: 40px;
 }
 
-/* Stepper */
-.stepper {
+/* STEPPER */
+.session-stepper {
   display: flex;
   justify-content: center;
   gap: 20px;
+  font-size: 20px;
   margin-bottom: 40px;
 }
 
-.step {
+.session-step {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.step-circle {
-  width: 32px;
-  height: 32px;
+.session-step-circle {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: #91C8F6;
+  background: #539ad9;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
 }
-
-/* Provider */
-.provider-row {
+.counsellor-h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: normal;
+    font-family: "Helvetica Neue", sans-serif;
+  margin-bottom: 30px;
+}
+/* PROVIDERS */
+.session-provider-row {
   display: flex;
   justify-content: center;
   gap: 40px;
 }
 
-.provider-card {
-  background: #ffffff;
-  border: 2px solid #91C8F6;
-  padding: 24px 40px;
-  border-radius: 14px;
-  cursor: pointer;
+/* HEADING */
+.counsellor-h2 {
   text-align: center;
-  min-width: 260px;
+  margin-bottom: 30px;
 }
 
-.provider-card.selected {
+/* GRID – 2 CARDS IN A ROW */
+.session-provider-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.session-provider-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px;
+  border: 2px solid #91C8F6;
+  border-radius: 16px;
+  cursor: pointer;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+/* SELECTED */
+.session-provider-card.session-selected {
   background: #539ad9;
   color: #ffffff;
   border-color: #539ad9;
 }
 
-/* Services */
-.service-list {
-  max-width: 700px;
-  margin: 0 auto;
+/* IMAGE PLACEHOLDER */
+.session-provider-image {
+  width: 90px;
+  height: 90px;
+  /* margin-top: -10px; */
+  border-radius: 50%;
+  background: #e6f2fb;
+  flex-shrink: 0;
+}
+
+/* TEXT CONTENT */
+.session-provider-details {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 6px;
 }
 
-.service-card {
-  border: 2px solid #91C8F6;
-  border-radius: 12px;
-  padding: 18px 22px;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
+.session-provider-name {
+  font-size: 24px;
+  /* margin-top: 10px !important; */
+  margin: 0;
 }
 
-.service-card.selected {
-  background: #539ad9;
-  color: #ffffff;
-  border-color: #539ad9;
+.session-provider-role {
+  font-size: 18px;
+  opacity: 0.9;
+  margin: 0;
 }
 
-/* Schedule */
-.schedule {
-  max-width: 600px;
-  margin: 0 auto;
+.session-provider-focus {
+  font-size: 16px;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+.session-provider-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #e6f2fb;
 }
 
-.time-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-top: 20px;
+.session-provider-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.time-grid button {
-  background: #91C8F6;
-  border: none;
-  border-radius: 10px;
-  padding: 10px;
-  cursor: pointer;
-}
 
-/* Payment */
-.payment-box {
+
+/* SCHEDULE */
+
+/* PAYMENT */
+.session-payment-box {
   max-width: 400px;
   margin: 0 auto;
   border: 2px solid #91C8F6;
@@ -120,34 +159,292 @@
   border-radius: 14px;
 }
 
-/* Navigation */
-.session-nav {
+/* NAVIGATION */
+/* .session-nav {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
+} */
+
+.session-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+  gap: 16px;
 }
 
-.btn-primary {
+.session-nav .session-btn-outline {
+  margin-right: auto;
+}
+
+
+.session-btn-primary {
+  background: #539ad9 !important;
+  color: #ffffff !important;
+  margin-left: 500px !important;
+  margin-top: 50px !important;
+  border: none !important;
+  padding: 12px 28px !important;
+  border-radius: 30px !important;
+  cursor: pointer !important;
+}
+
+.submit-payment-btn {
   background: #539ad9;
   color: #ffffff;
   border: none;
+  margin-left: 120px;
+  align-items: center;
   padding: 12px 28px;
   border-radius: 30px;
   cursor: pointer;
 }
 
-.btn-primary:disabled {
-  opacity: 0.6;
+.paynow-btn {
+  background: #539ad9;
+  color: #ffffff;
+  border: none;
+  margin-left: 150px;
+  align-items: center;
+  padding: 12px 28px;
+  border-radius: 30px;
+  cursor: pointer;
 }
 
-.btn-outline {
-  background: #ffffff;
+.close-btn {
+  background: #539ad9;
+  color: #ffffff;
+  border: none;
+  margin-top: 20px;
+  align-items: center;
+  padding: 12px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.session-btn-primary:disabled {
+  opacity: 0.6 !important;
+}
+
+.session-btn-outline {
+  background: #ffffff ;
+  border: 2px solid #91C8F6 ;
+  padding: 12px 28px ;
+  border-radius: 30px ;
+  cursor: pointer;
+}
+
+
+/* SESSION TYPE GRID */
+.session-service-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  font-size: 18px;
+}
+
+/* SERVICE CARD */
+.session-service-card {
   border: 2px solid #91C8F6;
-  padding: 12px 28px;
-  border-radius: 30px;
+  border-radius: 22px;
+  padding: 20px 24px;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  transition: all 0.2s ease;
 }
 
-.full {
-  width: 100%;
+/* PRICE */
+.session-service-card span:last-child {
+  font-weight: 500;
+}
+
+/* SELECTED STATE */
+.session-service-card.session-selected {
+  background: #539ad9;
+  color: #ffffff;
+  border-color: #539ad9;
+}
+/* STEP 3 GRID */
+.session-schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* FORM */
+.session-form {
+  border: 2px solid #91C8F6;
+  border-radius: 16px;
+  padding: 24px;
+  text-decoration: none;
+  outline: none;
+  background: #ffffff;
+}
+
+.session-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.session-form-group label {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.session-form-group input,
+.session-form-group textarea {
+  padding: 10px 12px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #91C8F6;
+  font-size: 14px;
+}
+
+.session-form-group textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+/* DATE & TIME */
+.session-datetime {
+  border: 2px solid #91C8F6;
+  border-radius: 16px;
+  padding: 24px;
+  background: #ffffff;
+}
+
+.session-date-picker {
+  margin-bottom: 20px;
+}
+
+.session-date-picker label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.session-date-picker input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #91C8F6;
+  width: 95%;
+}
+
+/* TIME SLOTS */
+.session-time-slots label {
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.session-time-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.session-time-slot {
+  border: 2px solid #91C8F6;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* SELECTED (ready for later state handling) */
+.session-time-slot.selected {
+  background: #539ad9;
+  color: #ffffff;
+  border-color: #539ad9;
+}
+
+.session-time-slot:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.session-hint {
+  font-size: 13px;
+  color: #777;
+  margin-top: 6px;
+}
+
+
+/* SUMMARY */
+.session-summary p {
+    font-size: 18px !important;
+  margin-bottom: 8px;
+}
+
+.session-total {
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+/* UPI BOX */
+.session-upi-box {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.session-qr {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.qr, .session-qr-placeholder {
+  width: 300px;
+  height: 300px;
+  border: 2px dashed #91C8F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #91C8F6;
+}
+
+.session-upi-id {
+    margin-top: 40px;
+    font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* MODAL */
+.session-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.session-modal {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 420px;
+  text-align: center;
+}
+
+.trans {
+    font-size: 18px;
+    font-weight: normal !important;
+    /* margin-bottom: 100px; */
 }
