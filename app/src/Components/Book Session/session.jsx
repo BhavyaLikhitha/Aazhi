@@ -372,7 +372,16 @@ const [showConfirmation, setShowConfirmation] = useState(false);
     </div>
   </>
 )}
-
+  {/* NAV */}
+        <div className="session-nav">
+          {step > 1 && (
+            <button
+              className="session-btn-outline"
+              onClick={() => setStep(step - 1)}
+            >
+              Back
+            </button>
+          )}
 
           {step < 4 && (
             <button
@@ -383,6 +392,7 @@ const [showConfirmation, setShowConfirmation] = useState(false);
               Continue
             </button>
           )}
+          </div>
         </div>
         {showConfirmation && (
   <div className="session-modal-overlay">

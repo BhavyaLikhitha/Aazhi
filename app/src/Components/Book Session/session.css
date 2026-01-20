@@ -1,10 +1,14 @@
 /* PAGE */
 .session-page {
-  max-width: 1100px;
+  /* max-width: 1100px; */
   margin: 0 auto;
   padding: 60px 20px;
   font-family: "Helvetica Neue", sans-serif !important;
-  background: #ffffff;
+  /* background: #ffffff;
+   */
+  /* background-color: #b2d5f1; */
+   
+     /* background-color: #91C8F6; */
 }
 
 /* TITLES */
