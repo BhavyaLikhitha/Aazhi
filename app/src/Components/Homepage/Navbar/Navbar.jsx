@@ -19,6 +19,7 @@ function Navbar() {
         <a href="/">Home</a>
         <a href="/book-session">Book a Session</a>
         <a href="/blog">Blog</a>
+        <a href="/products">Products</a>
         <a href="/about">About Us</a>
       </nav>
 
