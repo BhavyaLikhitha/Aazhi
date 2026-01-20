@@ -16,12 +16,13 @@ function Navbar() {
       </div>
 
       <nav className="navbar__links">
-        <a href="/">Home</a>
-        <a href="/book-session">Book a Session</a>
-        <a href="/blog">Blog</a>
-        <a href="/products">Products</a>
-        <a href="/about">About Us</a>
-      </nav>
+  <a href="/" className="nav-btn">Home</a>
+  <a href="/book-session" className="nav-btn">Book a Session</a>
+  <a href="/blog" className="nav-btn">Blog</a>
+  <a href="/products" className="nav-btn">Products</a>
+  <a href="/about" className="nav-btn">About Us</a>
+</nav>
+
 
     </header>
   );

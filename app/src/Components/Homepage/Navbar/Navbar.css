@@ -69,7 +69,7 @@
 
 .navbar__links a:hover {
    color: #539ad9;
-   font-weight: bold;
+   /* font-weight: bold; */
 }
 
 .navbar__profile {
@@ -84,3 +84,32 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+/* .navbar__links {
+  display: flex;
+  align-items: center;
+} */
+
+.nav-btn {
+  background: #ffffff;
+  border: 3px solid #91C8F6;
+  padding: 6px 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000000;
+  /* font-weight: 500; */
+  /* margin-left: 16px; */
+  /* transition: all 0.2s ease; */
+}
+
+
+/* Hover */
+
+
+
+/*  background: #ffffff ;
+  border: 2px solid #91C8F6 ;
+  padding: 12px 28px ;
+  margin-left: 260px !important;
+  border-radius: 30px ;
+  cursor: pointer; */
