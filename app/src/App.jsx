@@ -19,6 +19,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from './Components/Homepage/HomePage';
 import BookSession from "./Components/Book Session/session";
+import Products from "./Components/Products/Products";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/book-session" element={<BookSession />} />
+        <Route path = "/products" element = {<Products />} />
       </Routes>
     </BrowserRouter>
   );
