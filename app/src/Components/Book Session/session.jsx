@@ -4,6 +4,8 @@ import Header from "../Homepage/Navbar/Navbar";
 import Footer from "../Homepage/Footer/Footer";
 import woman1 from "../Homepage/Providers/women.png"
 import qr from "./qr.jpeg"
+import { useNavigate } from "react-router-dom";
+
 
 /* PROVIDERS */
 const providers = [
@@ -22,6 +24,7 @@ const providers = [
     image: woman1,
   },
 ];
+
 
 
 /* SERVICES (MASTER LIST) */
@@ -80,6 +83,7 @@ const [showPayment, setShowPayment] = useState(false);
 const [transactionId, setTransactionId] = useState("");
 const [showConfirmation, setShowConfirmation] = useState(false);
 
+const navigate = useNavigate();
 
   return (
     <>
@@ -403,13 +407,19 @@ const [showConfirmation, setShowConfirmation] = useState(false);
         verifying the payment.
       </p>
       <p>Thank you.</p>
-
       <button
-        className="close-btn"
-        onClick={() => setShowConfirmation(false)}
-      >
-        Close
-      </button>
+  className="close-btn"
+  onClick={() => {
+    setShowConfirmation(false);
+
+    setTimeout(() => {
+      navigate("/");
+    }, 1000);
+  }}
+>
+  Close
+</button>
+
     </div>
   </div>
 )}

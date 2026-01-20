@@ -185,8 +185,10 @@
 .session-btn-primary {
   background: #539ad9 !important;
   color: #ffffff !important;
-  margin-left: 500px !important;
-  margin-top: 50px !important;
+  /* margin-left: 100px !important; */
+  /* margin-right: 0 !important; */
+  /* margin-top: 50px !important; */
+  margin-right: 250px !important;
   border: none !important;
   padding: 12px 28px !important;
   border-radius: 30px !important;
@@ -234,6 +236,7 @@
   background: #ffffff ;
   border: 2px solid #91C8F6 ;
   padding: 12px 28px ;
+  margin-left: 260px !important;
   border-radius: 30px ;
   cursor: pointer;
 }
