@@ -69,7 +69,14 @@
 /* HEADING */
 .counsellor-h2 {
   text-align: center;
+  margin-bottom: 10px;
+}
+
+.counsellor-h3 {
+  text-align: center;
   margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 /* GRID – 2 CARDS IN A ROW */

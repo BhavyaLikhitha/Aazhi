@@ -602,6 +602,7 @@ export default function Session() {
         {step === 2 && provider && (
           <>
             <h2 className="counsellor-h2">Select Session Type</h2>
+            <h3 className="counsellor-h3">Note: If you are confused on what type of counselling to select, then select general counselling</h3>
             <div className="session-service-list">
               {providerServices[provider].map((key) => {
                 const s = services[key];
