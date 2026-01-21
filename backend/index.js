@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import debugLib from "debug";
 import authRoutes from "./Routes/authRoutes.js";
-
+import bookingRoutes from "./Routes/bookingRoutes.js";
 
 
 dotenv.config();
@@ -39,6 +39,8 @@ mongoose
 
 // Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/bookings", bookingRoutes);
+
 
 // Start server
 app.listen(PORT, () => {
