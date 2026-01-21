@@ -187,3 +187,14 @@
 .submit-btn:hover {
   background: #539ad9;
 }
+
+.form-error {
+  color: #d9534f;
+  font-size: 14px;
+  text-align: center;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
