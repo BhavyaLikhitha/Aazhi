@@ -6,6 +6,7 @@ import FaqSection from './FAQ/FAQ';
 import Testimonials from './Testimonials/Testimonials';
 import Footer from './Footer/Footer'
 import WhoCanOpt from './WhoCanOpt/Whocanopt';
+import HowTherapyWorks from './HowTherapyWorks/HowTherapyWorks';
 
 function HomePage() {
     return (
@@ -14,6 +15,7 @@ function HomePage() {
             <Hero />
             <WhoCanOpt />
             <Services />
+            <HowTherapyWorks />
             <Providers />
             <FaqSection />
             <Testimonials />

@@ -1,0 +1,145 @@
+.how-section {
+  padding: 90px 20px;
+  /* background: #f9fcff; */
+  margin-top: -100px !important;
+  font-family: "Helvetica Neue", sans-serif;
+  margin-bottom: 100px !important;
+}
+
+.how-title {
+  text-align: center;
+  font-size: 56px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.how-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 70px;
+}
+
+/* Steps container */
+.how-steps {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Each step */
+.how-step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+/* Icon + number */
+.how-icon-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.how-step-number {
+  position: absolute;
+  top: -12px;
+  right: calc(50% - 40px);
+  background: #ffffff;
+  color: #539ad9;
+  border: 2px solid #91c8f6;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.how-icon {
+  width: 90px;
+  height: 90px;
+  background: #539ad9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.how-icon svg {
+  font-size: 44px;
+}
+
+/* Card */
+.how-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 15px;
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); */
+   box-shadow: 0 0 0 2px rgba(83, 154, 217, 0.25),
+    0 12px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+   flex: 1;               /* KEY LINE */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.how-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.how-card:hover {
+  transform: translateY(-6px);
+   box-shadow: 0 0 0 2px rgba(10, 128, 231, 0.25),
+    0 12px 30px rgba(0, 0, 0, 0.06);
+  /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08); */
+ 
+
+}
+
+.how-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+
+  min-height: 48px; /* KEY LINE */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.how-card p {
+  font-size: 18px;
+  color: #6b7a90;
+  line-height: 1.6;
+   flex: 1;
+}
+
+/* Connector line */
+.how-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 45px;
+  right: -160px;
+  width: 300px;
+  height: 5px;
+  background: #91c8f6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .how-steps {
+    flex-direction: column;
+  }
+
+  .how-step:not(:last-child)::after {
+    display: none;
+  }
+}
