@@ -37,7 +37,7 @@ const Login = () => {
       setShowToast(true);
 
       setTimeout(() => {
-        navigate("/");
+        navigate("/admin");
       }, 2000);
     } catch (err) {
       setError("Invalid email or password");
