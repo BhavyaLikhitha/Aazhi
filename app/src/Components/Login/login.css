@@ -72,3 +72,9 @@
   border-radius: 8px;
   font-size: 14px;
 }
+
+.login-error {
+  margin-top: 12px;
+  color: #b91c1c;
+  font-size: 14px;
+}
