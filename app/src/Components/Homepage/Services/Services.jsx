@@ -1,69 +1,86 @@
-import React from 'react';
-import './services.css';
-import shellLeft from './services.png';
-import shellright from './services right.png';
+import React from "react";
+import "./Services.css";
+
+import BackHandOutlinedIcon from "@mui/icons-material/BackHandOutlined";
+import Diversity1OutlinedIcon from "@mui/icons-material/Diversity1Outlined";
+import GroupOutlinedIcon from "@mui/icons-material/GroupOutlined";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import AutoAwesomeOutlinedIcon from "@mui/icons-material/AutoAwesomeOutlined";
+import VolunteerActivismOutlinedIcon from "@mui/icons-material/VolunteerActivismOutlined";
+import RocketLaunchOutlinedIcon from "@mui/icons-material/RocketLaunchOutlined";
+import PsychologyAltOutlinedIcon from "@mui/icons-material/PsychologyAltOutlined";
 
 const services = [
-  { title: "General Counseling", description: "Professional support for various life challenges and mental health concerns." },
-  { title: "Relationship Counseling", description: "Navigate relationship challenges and build stronger connections.", highlighted: true },
-  { title: "Self development", description: "Unlock your potential and achieve personal growth goals." },
-  { title: "Guidance", description: "Expert advice to help you make important life decisions." },
-  { title: "Family Counseling", description: "Strengthen family bonds and resolve conflicts together." },
-  { title: "Parenting Support", description: "Tools and strategies for effective and confident parenting." },
-  { title: "Awareness program", description: "Educational programs to promote mental health awareness." }
+  {
+    title: "Individual Counselling",
+    description:
+      "For individuals seeking support with emotions, thoughts, life challenges, or personal concerns.",
+    icon: <BackHandOutlinedIcon />,
+  },
+  {
+    title: "Relationship Counselling",
+    description:
+      "Support for navigating relationship concerns, emotional understanding, and interpersonal challenges.",
+    icon: <Diversity1OutlinedIcon />,
+  },
+  {
+    title: "Couple Counselling",
+    description:
+      "For couples or partners wanting to improve communication, understanding, and emotional connection.",
+    icon: <GroupOutlinedIcon />,
+  },
+  {
+    title: "Family & Parenting Support",
+    description:
+      "For families and parents navigating conflicts, parenting challenges, or family transitions.",
+    icon: <FavoriteBorderOutlinedIcon />,
+  },
+  {
+    title: "Personal Growth & Self-Development",
+    description:
+      "For individuals interested in self-awareness, growth, and building healthier life patterns.",
+    icon: <AutoAwesomeOutlinedIcon />,
+  },
+  {
+    title: "Stress, Anxiety & Emotional Well-Being",
+    description:
+      "Support for managing stress, anxiety, and emotional difficulties related to daily pressures.",
+    icon: <VolunteerActivismOutlinedIcon />,
+  },
+  {
+    title: "Academic, Career & Life Guidance",
+    description:
+      "Guidance for students and adults seeking clarity in academic, career, or life decisions.",
+    icon: <RocketLaunchOutlinedIcon />,
+  },
+  {
+    title: "Mental Health Awareness Programs",
+    description:
+      "Psychoeducation and awareness programs for groups, institutions, and communities.",
+    icon: <PsychologyAltOutlinedIcon />,
+  },
 ];
 
-export default function Service() {
-  const topRow = services.slice(0, 4);
-  const bottomRow = services.slice(4, 7);
-
+export default function Services() {
   return (
-    <section id = "services">
-    <div className="services-section" style={{ backgroundColor: 'white' }}>
-      <h2 className="services-title">What we provide you</h2>
+    <section className="services-section" id="services">
+      {/* <h2 className="services-title">Our Services</h2> */}
+      <h2 className="services-title"> Comprehensive Mental Health Support</h2>
+      <p className="services-description">
+        We offer a range of services designed to support you at every stage of your mental health journey.
+      </p>
+      <div className="services-grid">
+        {services.map((service, index) => (
+          <div className="service-card" key={index}>
+            <div className="service-icon">
+              {service.icon}
+            </div>
 
-      <div className="services-row">
-        {topRow.map((service, index) => (
-          <div className="card-wrapper" key={index}>
-            <div className="flip-card">
-              <div className="flip-card-inner">
-                <div className={`flip-card-front ${service.highlighted ? 'highlighted' : ''}`}>
-                  {service.title}
-                </div>
-                <div className="flip-card-back">
-                  {service.description}
-                </div>
-              </div>
-            </div>
-            <div className="card-shadow"></div>
+            <h3 className="service-title">{service.title}</h3>
+            <p className="service-description">{service.description}</p>
           </div>
         ))}
       </div>
-  
-      <div className="services-row">
-        {bottomRow.map((service, index) => (
-          <div className="card-wrapper" key={index}>
-            <div className="flip-card">
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  {service.title}
-                </div>
-                <div className="flip-card-back">
-                  {service.description}
-                </div>
-              </div>
-            </div>
-            <div className="card-shadow"></div>
-          </div>
-        ))}
-      </div>
-           <div className="services-row services-row-bottom">
-  <img src={shellLeft} alt="Shell" className="shell-left" />
-  </div>
-             <div className="services-row services-row-bottom">
-  <img src={shellright} alt="Shell" className="shell-right" />
-  </div>
-    </div>
     </section>
   );
 }

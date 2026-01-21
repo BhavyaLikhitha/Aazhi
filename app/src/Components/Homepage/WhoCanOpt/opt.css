@@ -1,0 +1,83 @@
+/* SECTION */
+.who-section {
+  /* height: 100vh; */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-color: #91C8F6; */
+
+}
+
+/* SCROLL SNAP CONTAINER */
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+ .who-heading {
+  text-align: center;
+     font-family: "Helvetica Neue", sans-serif;
+  font-size: 56px;
+  font-weight: normal;
+  margin: 40px 20px 0 20px;
+  color: #2b2b2b;
+ }
+/* EACH SLIDE */
+.snap-slide {
+  height: 80vh;
+  scroll-snap-align: start;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* JELLY CIRCLE */
+.jelly-circle {
+  width: 420px;
+  height: 420px;
+  background: #539ad9;
+  border-radius: 50%;
+  padding: 50px;
+ 
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  animation: jelly 4s ease-in-out infinite;
+}
+
+/* TEXT */
+.circle-text {
+  font-size: 26px;
+  line-height: 1.5;
+  /* color: #2b2b2b; */
+   color: white;
+}
+
+/* JELLY MOTION */
+@keyframes jelly {
+  0% {
+    border-radius: 50% 50% 48% 52%;
+  }
+  25% {
+    border-radius: 52% 48% 50% 50%;
+  }
+  50% {
+    border-radius: 48% 52% 52% 48%;
+  }
+  75% {
+    border-radius: 51% 49% 48% 52%;
+  }
+  100% {
+    border-radius: 50% 50% 50% 50%;
+  }
+}
+
+/* OPTIONAL: hide scrollbar */
+.snap-container::-webkit-scrollbar {
+  display: none;
+}
