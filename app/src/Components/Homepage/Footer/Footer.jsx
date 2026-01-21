@@ -13,7 +13,7 @@ export default function Footer() {
            */}
         
 
-<Link to="/login" className="footer-logo-link">
+<Link to="/aazhi-admin-login" className="footer-logo-link">
   <h3 className="footer-logo">Aazhi</h3>
 </Link>
 

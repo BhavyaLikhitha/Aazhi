@@ -38,6 +38,7 @@ import Admin from "./Components/Admin Page/Admin";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -57,8 +58,8 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/blog" element={<Blogs />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/aazhi-admin-login" element={<Login />} />
+        <Route path="/someshwari-aazhi-admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>
   );
