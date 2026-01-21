@@ -51,7 +51,7 @@ const bookingSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    
+
     transactionId: {
       type: String,
       required: true,
@@ -62,7 +62,15 @@ const bookingSchema = new mongoose.Schema(
       type: String,
       enum: ["pending", "approved", "denied"],
       default: "pending"
-    }
+    },
+
+meetLinkSent: {
+  type: String,
+  enum: ["pending", "yes", "no"],
+  default: "pending"
+}
+
+
   },
   {
     timestamps: true

@@ -36,34 +36,44 @@ export const getAllBookings = async (req, res) => {
 
 export const updateBookingStatus = async (req, res) => {
   const { id } = req.params;
-  const { status } = req.body;
+  const { status, meetLinkSent } = req.body;
 
-  if (!["approved", "denied"].includes(status)) {
-    return res.status(400).json({
-      message: "Invalid status value"
-    });
+  const updateData = {};
+
+  // Approve / Deny logic
+  if (status !== undefined) {
+    if (!["approved", "denied"].includes(status)) {
+      return res.status(400).json({ message: "Invalid status" });
+    }
+    updateData.status = status;
+
+    // 🔐 IMPORTANT: when moving to processed, reset meetLinkSent
+    updateData.meetLinkSent = "pending";
+  }
+
+  // Meet link decision logic (YES / NO buttons)
+  if (meetLinkSent !== undefined) {
+    if (!["yes", "no"].includes(meetLinkSent)) {
+      return res.status(400).json({
+        message: "Invalid meetLinkSent value"
+      });
+    }
+    updateData.meetLinkSent = meetLinkSent;
   }
 
   try {
-    const booking = await Booking.findByIdAndUpdate(
+    const updated = await Booking.findByIdAndUpdate(
       id,
-      { status },
+      updateData,
       { new: true }
     );
 
-    if (!booking) {
-      return res.status(404).json({
-        message: "Booking not found"
-      });
+    if (!updated) {
+      return res.status(404).json({ message: "Booking not found" });
     }
 
-    res.json({
-      message: `Booking ${status}`,
-      booking
-    });
-  } catch (error) {
-    res.status(500).json({
-      message: "Failed to update booking"
-    });
+    res.json({ booking: updated });
+  } catch (err) {
+    res.status(500).json({ message: "Update failed" });
   }
 };
