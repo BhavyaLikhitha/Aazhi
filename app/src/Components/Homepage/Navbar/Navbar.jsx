@@ -17,7 +17,7 @@ function Navbar() {
 
       <nav className="navbar__links">
   <a href="/" className="nav-btn">Home</a>
-  <a href="/book-session" className="nav-btn">Book a Session</a>
+  <a href="/book-session" className="nav-btn">Book Online Session</a>
   <a href="/blog" className="nav-btn">Blog</a>
   <a href="/products" className="nav-btn">Products</a>
   <a href="/about" className="nav-btn">About Us</a>

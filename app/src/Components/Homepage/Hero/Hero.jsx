@@ -26,7 +26,7 @@ function HeroSection() {
           className="hero__button"
           onClick={handleBookSession}
         >
-          Book a session
+          Book an Online session
         </button>
       </div>
     </section>
