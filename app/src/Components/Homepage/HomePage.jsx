@@ -7,6 +7,7 @@ import Testimonials from './Testimonials/Testimonials';
 import Footer from './Footer/Footer'
 import WhoCanOpt from './WhoCanOpt/Whocanopt';
 import HowTherapyWorks from './HowTherapyWorks/HowTherapyWorks';
+import WhyChooseUs from './WhyChooseUs/WhyChooseUs';
 
 function HomePage() {
     return (
@@ -17,6 +18,7 @@ function HomePage() {
             <Services />
             <HowTherapyWorks />
             <Providers />
+            <WhyChooseUs />
             <FaqSection />
             <Testimonials />
               <Footer />

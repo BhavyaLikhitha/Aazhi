@@ -1,63 +1,125 @@
 .providers-section {
-  background-color: #91C8F6;
-  text-align: center;
-  width: 100%;
-  font-family: 'Helvetica Neue', sans-serif;
-  margin-top: -140px !important;      /* ✅ prevents gap */
-  padding-top: 40px;  /* optional, for breathing room */
-  position: relative; /* to ensure z-index if needed */
-  z-index: 10;
-
+  padding: 90px 20px;
+  /* background: #f7fbfa; */
+  font-family: "Helvetica Neue", sans-serif;
+  margin-top: -270px !important;
 }
 
 .providers-title {
-    margin-top: 0;
+  text-align: center;
   font-size: 56px;
   font-weight: normal;
-  margin-bottom: 40px;
-  align-items: center;
-  color: #000;
+  margin-bottom: 60px;
 }
 
+/* GRID */
 .providers-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 80px;
-  margin-top: -40px !important;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
 }
 
+/* CARD */
 .provider-card {
-    margin-top: -20px;
-  background-color: transparent;
-  padding: 40px 20px;
-  text-align: center;
+   background: #ffffff;
+  border-radius: 16px;
+  padding: 15px;
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); */
+   box-shadow: 0 0 0 2px rgba(83, 154, 217, 0.25),
+    0 12px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+   flex: 1;               /* KEY LINE */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.provider-image {
+.provider-card:hover {
+  /* transform: translateY(-4px); */
+   transform: translateY(-6px);
+   box-shadow: 0 0 0 2px rgba(10, 128, 231, 0.25),
+}
+
+/* IMAGE */
+.provider-img {
   width: 100%;
-  max-width: 280px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 50%;
-  margin-bottom: 20px;
+  height: 250px;
+  /* object-fit: cover; */
 }
 
+/* BODY */
+.provider-body {
+  padding: 10px;
+}
+
+/* RATING */
+.provider-rating {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.provider-rating span {
+  color: #777;
+}
+
+/* NAME + ROLE */
 .provider-name {
-  font-size: 32px;
-  font-weight: 700;
-  margin: 0;
-  color: #000;
-}
-
-.provider-qual {
-  font-size: 22px;
-  margin: 5px 0 10px;
-  color: #222;
-}
-
-.provider-focus {
   font-size: 20px;
-  color: #000;
-  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.provider-role{
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 16px;
+}
+.provider-experience {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* TAGS */
+.provider-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.provider-tag {
+  background: rgba(145, 200, 246, 0.35);
+  color: #1f5f99;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* BUTTON */
+.provider-btn {
+  background-color:  #539ad9;
+  /* margin-top: 20px ; */
+  margin-left: 150px !important;
+  /* margin-left: auto; */
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Helvetica Neue', sans-serif;
+  /* font-weight: 600; */
+  transition: background-color 0.3s ease;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .providers-grid {
+    grid-template-columns: 1fr;
+  }
 }

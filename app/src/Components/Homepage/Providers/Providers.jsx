@@ -1,41 +1,60 @@
-import React from 'react';
-import './providers.css';
-import placeholder from './women.png'; // Replace with actual image
+import React from "react";
+import "./providers.css";
+import woman1 from "./women.png";
 
 export default function Providers() {
   const providers = [
     {
-      name: 'Someshwari S',
-      qualification: 'M.A. Psychology, PGDCP',
-      focus: 'Self development, Discrimination, identity, Relationship',
-      image: placeholder
+      name: "Someshwari S",
+      designation: "Psychologist",
+      // rating: 4.9,
+      // sessions: 850,
+      Experience : "2.5 years",
+      focus: ["Self-development", "Identity", "Relationships"],
+      image: woman1,
     },
     {
-      name: 'Udaya Priyanka P',
-      qualification: 'MSW - Family and Child Welfare, PGDCP',
-      focus: 'Children, family, parenting.',
-      image: placeholder
-    }
+      name: "Udaya Priyanka P",
+      designation: "Social Worker",
+      // rating: 4.8,
+      Experience : "3.5 years",
+      // sessions: 620,
+      focus: ["Family", "Parenting", "Emotional support"],
+      image: woman1,
+    },
   ];
 
   return (
-    <section id="providers">
-    <div className="providers-section">
-      <h2 className="providers-title">Your providers</h2>
+    <section id="providers" className="providers-section">
+      <h2 className="providers-title">Your Providers</h2>
 
       <div className="providers-grid">
-        {providers.map((provider, index) => (
-          <div key={index} className="provider-card">
-            <img src={provider.image} alt={provider.name} className="provider-image" />
-            <h3 className="provider-name">{provider.name}</h3>
-            <p className="provider-qual">{provider.qualification}</p>
-            <p className="provider-focus">
-              <strong>Area of focus:</strong> {provider.focus}
-            </p>
+        {providers.map((p, index) => (
+          <div className="provider-card" key={index}>
+            <img src={p.image} alt={p.name} className="provider-img" />
+
+            <div className="provider-body">
+              {/* <div className="provider-rating">
+                ⭐ {p.rating} <span>({p.sessions} sessions)</span>
+              </div> */}
+
+              <h3 className="provider-name">{p.name}</h3>
+              <p className="provider-role">{p.designation}</p>
+              <p className="provider-experience">Experience: {p.Experience}</p>
+
+              <div className="provider-tags">
+                {p.focus.map((tag, i) => (
+                  <span key={i} className="provider-tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <button className="provider-btn">Book Session</button>
+            </div>
           </div>
         ))}
       </div>
-    </div>
     </section>
   );
 }
