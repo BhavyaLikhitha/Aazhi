@@ -18,6 +18,7 @@ export default function Service() {
   const bottomRow = services.slice(4, 7);
 
   return (
+    <section id = "services">
     <div className="services-section" style={{ backgroundColor: 'white' }}>
       <h2 className="services-title">What we provide you</h2>
 
@@ -63,6 +64,6 @@ export default function Service() {
   <img src={shellright} alt="Shell" className="shell-right" />
   </div>
     </div>
-    
+    </section>
   );
 }

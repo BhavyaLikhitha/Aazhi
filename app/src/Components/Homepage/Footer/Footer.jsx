@@ -1,6 +1,9 @@
 import React from "react";
-import "./Footer.css";
 import { Link } from "react-router-dom";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import logo from "../Navbar/logo.png";
+import "./Footer.css";
 
 export default function Footer() {
   return (
@@ -9,38 +12,60 @@ export default function Footer() {
 
         {/* Brand */}
         <div className="footer-brand">
-          {/* <h3 className="footer-logo">Aazhi</h3>
-           */}
-        
-
-<Link to="/aazhi-admin-login" className="footer-logo-link">
-  <h3 className="footer-logo">Aazhi</h3>
-</Link>
+          <Link to="/aazhi-admin-login" className="footer-logo-link">
+            <img src={logo} alt="Aazhi logo" className="footer-logo-img" />
+            <span className="footer-logo-text">Aazhi</span>
+          </Link>
 
           <p className="footer-tagline">
             Mental health support that listens, understands, and guides you forward.
           </p>
+
+          <div className="footer-socials">
+            <a
+              href="https://www.instagram.com/counseling_in_tamil?igsh=MWRsZ2szM3Q1aDh2ZA=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <InstagramIcon />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/somesh26"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon />
+            </a>
+          </div>
         </div>
 
-        {/* Links */}
+        {/* Quick Links */}
         <div className="footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Book a Session</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Providers</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/book-session">Book an Online Session</Link></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#providers">Providers</a></li>
+            <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
 
         {/* Contact */}
         <div className="footer-contact">
           <h4>Contact</h4>
-          <p>Email: <a href="mailto:support@aazhi.com">support@aazhi.com</a></p>
+          <p>
+            Phone: <a href="tel:7604947825">7604947825</a>
+          </p>
+          <p>
+            Email: 
+            <a href="mailto:navil.counselingservices@gmail.com">
+               navil.counselingservices@gmail.com
+            </a>
+          </p>
           <p>Location: India</p>
         </div>
-
       </div>
 
       <div className="footer-bottom">

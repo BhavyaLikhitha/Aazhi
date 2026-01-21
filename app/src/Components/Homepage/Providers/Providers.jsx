@@ -19,6 +19,7 @@ export default function Providers() {
   ];
 
   return (
+    <section id="providers">
     <div className="providers-section">
       <h2 className="providers-title">Your providers</h2>
 
@@ -35,5 +36,6 @@ export default function Providers() {
         ))}
       </div>
     </div>
+    </section>
   );
 }

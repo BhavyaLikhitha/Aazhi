@@ -1,106 +1,129 @@
 .footer {
-  /* background-color: #0b23ef; */
-  color: #333;
-  font-family: 'Helvetica Neue', sans-serif;
-  padding-top: 50px;
-   /* background-color: #d8e3ec;
-    */
-      /* background-color: #b2d5f1; */
-       border-top: 3px solid #91C8F6;
+  margin-top: 0;
+  /* background: #f7fbfa; */
+  padding: 60px 20px 20px;
+  font-family: "Helvetica Neue", sans-serif;
+   font-family: 'Helvetica Neue', sans-serif;
+  /* padding-top: 50px; */
+   border-top: 3px solid #91C8F6;
 }
 
 .footer-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  /* margin-left: 100px; */
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 40px;
- 
 }
 
-/* Brand */
 .footer-brand {
-  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.footer-logo {
-  font-size: 34px;
+.footer-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  
+}
+
+.footer-logo-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.footer-logo-text {
   font-family: 'Leckerli One', cursive;
-  margin-bottom: 10px;
+  font-size: 44px;
+  font-weight: normal;
+  color: #0b238f;
 }
 
 .footer-tagline {
   font-size: 18px;
-  line-height: 1.6;
-  opacity: 0.9;
+  color: #555;
+  max-width: 320px;
 }
 
-/* Links */
+.footer-socials {
+  display: flex;
+  gap: 14px;
+ 
+ 
+}
+
+.footer-socials a svg {
+  font-size: 36px;
+}
+
+
+.footer-socials a {
+  color: #539ad9;
+  transition: color 0.2s ease;
+
+}
+
+.footer-socials a:hover {
+  color: #91C8F6;
+}
+
 .footer-links h4,
 .footer-contact h4 {
+  margin-bottom: 14px;
   font-size: 18px;
-  margin-bottom: 12px;
 }
 
 .footer-links ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .footer-links li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .footer-links a {
-  color: black;
   text-decoration: none;
+  color: #333;
   font-size: 18px;
-  opacity: 0.9;
 }
 
 .footer-links a:hover {
-  text-decoration: underline;
+  color: #539ad9;
 }
 
-/* Contact */
 .footer-contact p {
   font-size: 18px;
   margin-bottom: 8px;
 }
 
 .footer-contact a {
-  color: black;
-  text-decoration: none;
+  color: #333;
+  /* text-decoration: none; */
 }
 
 .footer-contact a:hover {
-  text-decoration: underline;
+  color: #539ad9;
 }
 
-/* Bottom bar */
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
   text-align: center;
-  padding: 15px 20px;
   font-size: 13px;
-  opacity: 0.85;
+  color: #777;
 }
 
-.footer-logo-link {
-  text-decoration: none;
-  cursor: pointer;
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 }
-
-.footer-logo {
- font-family: 'Leckerli One', cursive;
-  font-size: 34px;
-  font-weight: normal;
-  color: #0b238f;
-  /* color: #91C8F6; */
-  /* color: #539ad9; */
-  margin: 0;
-}
-
