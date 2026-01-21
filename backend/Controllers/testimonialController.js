@@ -39,7 +39,7 @@ export const createTestimonial = async (req, res) => {
       author,
       text,
       rating,
-    //   approved: false,
+      approved: true,
     });
 
     res.status(201).json({

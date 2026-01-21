@@ -21,7 +21,7 @@ const testimonialSchema = new mongoose.Schema(
     },
     approved: {
       type: Boolean,
-      default: false, // admin moderation later
+      default: true, // admin moderation later
     },
   },
   {
