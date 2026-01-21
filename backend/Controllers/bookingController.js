@@ -1,4 +1,4 @@
-import Booking from "../models/Booking.js";
+import Booking from "../Models/Bookings.js";
 
 export const createBooking = async (req, res) => {
   try {
@@ -8,13 +8,14 @@ export const createBooking = async (req, res) => {
       message: "Booking submitted successfully",
       booking
     });
+    console.log("Booking created:", booking);
   } catch (error) {
     if (error.code === 11000) {
       return res.status(400).json({
         message: "Transaction ID already exists"
       });
     }
-
+    console.error("Error creating booking:", error);
     res.status(500).json({
       message: "Failed to create booking",
       error: error.message

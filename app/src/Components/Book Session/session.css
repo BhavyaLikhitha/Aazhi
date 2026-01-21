@@ -455,3 +455,20 @@
     font-weight: normal !important;
     /* margin-bottom: 100px; */
 }
+
+.copy-upi-btn {
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid #539ad9;
+  background: transparent;
+  color: #539ad9;
+  cursor: pointer;
+}
+
+.copy-upi-btn:hover {
+  background: #539ad9;
+  color: #ffffff;
+}
