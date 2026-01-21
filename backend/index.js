@@ -5,6 +5,7 @@ import cors from "cors";
 import debugLib from "debug";
 import authRoutes from "./Routes/authRoutes.js";
 import bookingRoutes from "./Routes/bookingRoutes.js";
+import testimonialRoutes from "./Routes/testimonialRoutes.js";
 
 
 dotenv.config();
@@ -40,6 +41,7 @@ mongoose
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/bookings", bookingRoutes);
+app.use("/api/testimonials", testimonialRoutes);
 
 
 // Start server
