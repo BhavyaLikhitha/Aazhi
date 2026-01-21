@@ -3,10 +3,12 @@ import "./Admin.css";
 import Navbar from "../Homepage/Navbar/Navbar";
 import Footer from "../Homepage/Footer/Footer";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
   const fetchBookings = async () => {
     try {
@@ -85,10 +87,31 @@ const updateMeetLink = async (id, decision) => {
 
       <div className="admin-page">
         <div className="admin-container">
-          <h1 className="admin-title">Admin Dashboard</h1>
-          <p className="admin-subtitle">
-            Manage and review session booking requests
-          </p>
+           {/* Header Row */}
+        <div className="admin-header">
+          <div>
+            <h1 className="admin-title">Admin Dashboard</h1>
+            <p className="admin-subtitle">
+              Manage and review session booking requests
+            </p>
+          </div>
+
+          <div className="admin-actions">
+            <button
+              className="admin-btn"
+              onClick={() => navigate("/create-blog")}
+            >
+              Create Blog
+            </button>
+
+            <button
+              className="admin-btn"
+              onClick={() => navigate("/create-product")}
+            >
+              Create Product
+            </button>
+          </div>
+        </div>
 
           {loading ? (
             <p className="admin-loading">Loading bookings...</p>

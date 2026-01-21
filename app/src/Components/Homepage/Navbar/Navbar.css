@@ -60,16 +60,25 @@
 }
 
 .navbar__links a {
-  text-decoration: none;
+  /* text-decoration: none;
   color: black;
   font-size: 20px;
   font-weight: normal;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease; */
+   background: #ffffff;
+  border: 2px solid #539ad9;
+  padding: 10px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
 }
 
 .navbar__links a:hover {
-   color: #539ad9;
+   /* color: #539ad9; */
    /* font-weight: bold; */
+    background: #539ad9;
+  color: #ffffff;
 }
 
 .navbar__profile {
