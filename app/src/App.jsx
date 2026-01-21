@@ -20,6 +20,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from './Components/Homepage/HomePage';
 import BookSession from "./Components/Book Session/session";
 import Products from "./Components/Products/Products";
+import AboutUs from "./Components/About us/About";
+import Blogs from "./Components/Blogs/Blogs";
+import Login from "./Components/Login/Login";
 
 function App() {
   return (
@@ -28,6 +31,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/book-session" element={<BookSession />} />
         <Route path = "/products" element = {<Products />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path = "/blog" element = {<Blogs />} />
+        <Route path = "/login" element = {<Login />} />
       </Routes>
     </BrowserRouter>
   );

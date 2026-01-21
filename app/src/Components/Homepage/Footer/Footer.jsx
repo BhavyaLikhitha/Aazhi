@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -8,7 +9,14 @@ export default function Footer() {
 
         {/* Brand */}
         <div className="footer-brand">
-          <h3 className="footer-logo">Aazhi</h3>
+          {/* <h3 className="footer-logo">Aazhi</h3>
+           */}
+        
+
+<Link to="/login" className="footer-logo-link">
+  <h3 className="footer-logo">Aazhi</h3>
+</Link>
+
           <p className="footer-tagline">
             Mental health support that listens, understands, and guides you forward.
           </p>

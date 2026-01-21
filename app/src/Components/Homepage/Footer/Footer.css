@@ -89,10 +89,18 @@
   opacity: 0.85;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.footer-logo-link {
+  text-decoration: none;
+  cursor: pointer;
 }
+
+.footer-logo {
+ font-family: 'Leckerli One', cursive;
+  font-size: 34px;
+  font-weight: normal;
+  color: #0b238f;
+  /* color: #91C8F6; */
+  /* color: #539ad9; */
+  margin: 0;
+}
+

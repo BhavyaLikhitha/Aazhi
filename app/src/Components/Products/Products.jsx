@@ -1,32 +1,35 @@
-import React from "react";
 import "./products.css";
-import Header from "../Homepage/Navbar/Navbar";
+import Navbar from "../Homepage/Navbar/Navbar";
 import Footer from "../Homepage/Footer/Footer";
 
 const Products = () => {
   return (
     <>
-      <Header />
+      <Navbar />
     <div className="products-page">
       <div className="products-container">
         <h1 className="products-title">Products</h1>
+
         <p className="products-subtitle">
-          Our bookstore is currently under development.
+          Thoughtfully designed offerings — coming soon.
         </p>
 
-        <div className="products-card">
-          <p className="products-message">
-            🚧 This page is a work in progress.
-          </p>
-          <p className="products-message-secondary">
-            We are curating a collection of Journals and will be launching this
-            section soon. Please check back later.
+        <div className="products-status-card">
+          <h3>🚧 Products Under Progress</h3>
+          <p>
+            We are currently building and refining our products to ensure they
+            meet the highest standards of quality and usability. Detailed
+            product information will be available here soon.
           </p>
         </div>
+
+        <p className="products-footer-note">
+          Thank you for your patience. Please check back shortly.
+        </p>
       </div>
     </div>
     <Footer />
-    </>
+      </>
   );
 };
 
