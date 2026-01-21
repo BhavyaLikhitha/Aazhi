@@ -23,6 +23,7 @@ import Products from "./Components/Products/Products";
 import AboutUs from "./Components/About us/About";
 import Blogs from "./Components/Blogs/Blogs";
 import Login from "./Components/Login/Login";
+import Admin from "./Components/Admin Page/Admin";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path = "/blog" element = {<Blogs />} />
         <Route path = "/login" element = {<Login />} />
+        <Route path = "/admin" element = {<Admin />} />
       </Routes>
     </BrowserRouter>
   );
