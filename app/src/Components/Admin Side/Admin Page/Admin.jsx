@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Admin.css";
-import Navbar from "../Homepage/Navbar/Navbar";
-import Footer from "../Homepage/Footer/Footer";
+import Navbar from "../../Homepage/Navbar/Navbar";
+import Footer from "../../Homepage/Footer/Footer";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 

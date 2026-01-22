@@ -34,10 +34,10 @@ import Products from "./Components/Products/Products";
 import AboutUs from "./Components/About us/About";
 import Blogs from "./Components/Blogs/Blogs";
 import Login from "./Components/Login/Login";
-import Admin from "./Components/Admin Page/Admin";
+import Admin from "./Components/Admin Side/Admin Page/Admin";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import CreateBlog from "./Components/Admin Side/Admin Blogs/Admin Blogs";
 
 function App() {
   return (
@@ -60,6 +60,7 @@ function App() {
         <Route path="/blog" element={<Blogs />} />
         <Route path="/aazhi-admin-login" element={<Login />} />
         <Route path="/someshwari-aazhi-admin" element={<Admin />} />
+        <Route path="/create-blog" element={<CreateBlog />} />
       </Routes>
     </BrowserRouter>
   );

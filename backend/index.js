@@ -6,7 +6,8 @@ import debugLib from "debug";
 import authRoutes from "./Routes/authRoutes.js";
 import bookingRoutes from "./Routes/bookingRoutes.js";
 import testimonialRoutes from "./Routes/testimonialRoutes.js";
-
+import adminBlogRoutes from "./Routes/adminBlogRoutes.js";
+import publicBlogRoutes from "./Routes/publicBlogsRoutes.js";
 
 dotenv.config();
 
@@ -42,6 +43,12 @@ mongoose
 app.use("/api/auth", authRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/testimonials", testimonialRoutes);
+// Admin blog routes
+app.use("/api/admin", adminBlogRoutes);
+
+// Public blog routes
+app.use("/api", publicBlogRoutes);
+
 
 
 // Start server
