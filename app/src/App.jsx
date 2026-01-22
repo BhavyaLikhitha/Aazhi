@@ -38,6 +38,7 @@ import Admin from "./Components/Admin Side/Admin Page/Admin";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CreateBlog from "./Components/Admin Side/Admin Blogs/Admin Blogs";
+import BlogDetails from "./Components/Blogs/BlogDetails";
 
 function App() {
   return (
@@ -56,11 +57,12 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/book-session" element={<BookSession />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/blog" element={<Blogs />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="/aazhi-admin-login" element={<Login />} />
         <Route path="/someshwari-aazhi-admin" element={<Admin />} />
         <Route path="/create-blog" element={<CreateBlog />} />
+        <Route path="/blogs/:id" element={<BlogDetails />} />
       </Routes>
     </BrowserRouter>
   );
