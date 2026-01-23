@@ -29,7 +29,7 @@
 
 // /* SERVICES (MASTER LIST) */
 // const services = {
-//   general: { title: "General Counseling", price: 799 },
+//   Individual: { title: "Individual Counseling", price: 799 },
 //   relationship: { title: "Relationship Counseling", price: 799 },
 //   self: { title: "Self Development", price: 799 },
 //   guidance: { title: "Guidance", price: 899 },
@@ -41,7 +41,7 @@
 
 // /* PROVIDER → ALLOWED SERVICES */
 // const providerServices = {
-//   1: ["general", "relationship", "self", "couple", "guidance", "awareness"],
+//   1: ["Individual", "relationship", "self", "couple", "guidance", "awareness"],
 //   2: ["parenting", "family", "guidance", "awareness"],
 // };
 
@@ -459,18 +459,19 @@ const providers = [
 
 /* SERVICES */
 const services = {
-  general: { title: "General Counseling", price: 799 },
+  Individual: { title: "Individual Counseling", price: 799 },
   relationship: { title: "Relationship Counseling", price: 799 },
-  self: { title: "Self Development", price: 799 },
-  guidance: { title: "Guidance", price: 899 },
-  parenting: { title: "Parenting Support", price: 799 },
-  family: { title: "Family Counseling", price: 799 },
-  awareness: { title: "Awareness Program", price: 799 },
-  couple: { title: "Couple Counseling", price: 1599 },
+   couple: { title: "Couple Counseling", price: 1599 },
+   family: { title: "Family & Parenting Support", price: 799 },
+  self: { title: "Personal Growth & Self-Development", price: 799 },
+  guidance: { title: "Academic, Career & Life Guidance", price: 899 },
+  parenting: { title: "Stress, Anxiety & Emotional Well-Being", price: 799 },
+  awareness: { title: "Mental Health Awareness Programs", price: 799 },
+ 
 };
 
 const providerServices = {
-  1: ["general", "relationship", "self", "couple", "guidance", "awareness"],
+  1: ["Individual", "relationship", "self", "couple", "guidance", "awareness"],
   2: ["parenting", "family", "guidance", "awareness"],
 };
 
@@ -602,7 +603,7 @@ export default function Session() {
         {step === 2 && provider && (
           <>
             <h2 className="counsellor-h2">Select Session Type</h2>
-            <h3 className="counsellor-h3">Note: If you are confused on what type of counselling to select, then select general counselling</h3>
+            <h3 className="counsellor-h3">Note: If you are confused on what type of counselling to select, then select Individual counselling</h3>
             <div className="session-service-list">
               {providerServices[provider].map((key) => {
                 const s = services[key];
