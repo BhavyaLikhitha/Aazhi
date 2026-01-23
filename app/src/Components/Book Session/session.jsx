@@ -451,7 +451,7 @@ const providers = [
   {
     id: 2,
     name: "Udaya Priyanka P",
-    role: "MSW – Family & Child Welfare",
+    role: "Social Worker",
     focus: "Children, Family, Parenting",
     image: woman1,
   },
