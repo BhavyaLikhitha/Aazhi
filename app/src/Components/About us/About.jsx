@@ -4,7 +4,7 @@ import Footer from "../Homepage/Footer/Footer";
 import InfoOutlineIcon from "@mui/icons-material/InfoOutline";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { useEffect, useRef, useState } from "react";
-
+import InstagramIcon from "@mui/icons-material/Instagram";
 const AboutPage = () => {
   
 
@@ -201,7 +201,20 @@ function TimelineItem({ item, index }) {
 <section className="founder-scroll-section">
   <div className="founder-header">
     <span className="eyebrow">MEET OUR FOUNDER</span>
-    <h2>Someshwari</h2>
+    <div className="name-with-social">
+  <h2>Someshwari</h2>
+
+  <div className="socials">
+    <a
+      href="https://www.instagram.com/_tamil_psychologist"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <InstagramIcon />
+    </a>
+  </div>
+</div>
+
     <p className="role">Counselling Psychologist</p>
   </div>
 
