@@ -12,8 +12,9 @@ const slides = [
 
 export default function WhoCanOpt() {
   return (
+    <>
+    <h2 className="who-heading">Who can opt for counselling?</h2>
     <section className="who-section">
-      <h2 className="who-heading">Who can opt for counselling?</h2>
       <div className="snap-container">
         {slides.map((text, index) => (
           <div className="snap-slide" key={index}>
@@ -24,5 +25,6 @@ export default function WhoCanOpt() {
         ))}
       </div>
     </section>
+    </>
   );
 }
