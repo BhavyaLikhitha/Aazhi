@@ -1,22 +1,25 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./hero.css";
-import waveImage from "./hero.png";
+import heroVideo from "./vedio.mp4";
 
 function HeroSection() {
   const navigate = useNavigate();
 
-  const handleBookSession = () => {
-    navigate("/book-session");
-  };
-
   return (
     <section className="hero">
-      <div className="hero__left">
-        <img src={waveImage} alt="Wave" className="hero__wave" />
-      </div>
+      {/* Background Video */}
+      <video
+        className="hero__video"
+        src={heroVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
 
-      <div className="hero__right">
+      {/* Overlay Content */}
+      <div className="hero__overlay">
         <h2 className="hero__quote">
           "YOU DON'T HAVE TO SAIL THROUGH THIS ALONE <br />
           LET’S NAVIGATE IT TOGETHER."
@@ -24,7 +27,7 @@ function HeroSection() {
 
         <button
           className="hero__button"
-          onClick={handleBookSession}
+          onClick={() => navigate("/book-session")}
         >
           Book an Online session
         </button>
