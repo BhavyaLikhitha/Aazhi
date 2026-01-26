@@ -5,4 +5,4 @@ physcology website
 
 - just left with finishing touches
 - tech stack user:
-react, javascript
+react, javascript, node js, express, mongo db
