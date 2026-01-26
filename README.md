@@ -4,3 +4,5 @@
 physcology website
 
 - just left with finishing touches
+- tech stack user:
+react, javascript
