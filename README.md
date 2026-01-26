@@ -3,4 +3,4 @@
 ## someshwari's project 
 physcology website
 
-
+- just left with finishing touches
